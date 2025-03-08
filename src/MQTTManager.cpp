@@ -494,10 +494,10 @@ void MQTTManager_::sendStats()
     if (HA_DISCOVERY && mqtt.isConnected())
     {
         char buffer[8];
-#ifndef awtrix2_upgrade
-        snprintf(buffer, 5, "%d", BATTERY_PERCENT);
-        battery->setValue(buffer);
-#endif
+// #ifndef awtrix2_upgrade
+//         snprintf(buffer, 5, "%d", BATTERY_PERCENT);
+//         battery->setValue(buffer);
+// #endif
         if (SENSOR_READING)
         {
             snprintf(buffer, sizeof(buffer), "%.*f", TEMP_DECIMAL_PLACES, CURRENT_TEMP);
