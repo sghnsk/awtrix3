@@ -191,6 +191,7 @@ IPAddress FSWebServer::startWiFi(uint32_t timeout, const char *apSSID, const cha
     if (strlen(_ssid) && strlen(_pass))
     {
         WiFi.begin(_ssid, _pass, 0, 0, true);
+        WiFi.setTxPower(WIFI_POWER_8_5dBm);
         Serial.print(F("Connecting to "));
         Serial.println(_ssid);
 
@@ -222,6 +223,7 @@ IPAddress FSWebServer::startWiFi(uint32_t timeout, const char *apSSID, const cha
 
     WiFi.begin();
     ip = WiFi.softAPIP();
+    WiFi.setTxPower(WIFI_POWER_8_5dBm);
     Serial.print(F("\nAP mode.\nServer IP address: "));
     Serial.println(ip);
     Serial.println();
@@ -332,7 +334,7 @@ void FSWebServer::doWifiConnection()
         Serial.print("\nConnecting to ");
         Serial.println(ssid);
         WiFi.begin(ssid.c_str(), pass.c_str(), 0, 0, true);
-
+        WiFi.setTxPower(WIFI_POWER_8_5dBm);
         uint32_t beginTime = millis();
         while (WiFi.status() != WL_CONNECTED)
         {

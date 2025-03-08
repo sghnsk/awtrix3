@@ -28,8 +28,8 @@ const char *message = "HELLO"; // Die Nachricht, die gesendet werden soll
 #define MEDIAN_WND 7 // A median filter window size of seven should be enough to filter out most spikes
 #define MEAN_WND 7   // After filtering the spikes we don't need many samples anymore for the average
 
-#define DFPLAYER_RX 23
-#define DFPLAYER_TX 18
+#define DFPLAYER_RX RX
+#define DFPLAYER_TX TX
 #define BUZZER_PIN 15
 #define RESET_PIN 13
 
@@ -49,8 +49,8 @@ const char *message = "HELLO"; // Die Nachricht, die gesendet werden soll
 #define BUTTON_UP_PIN 7
 #define BUTTON_DOWN_PIN 8
 #define BUTTON_SELECT_PIN 10
-#define I2C_SCL_PIN 10
-#define I2C_SDA_PIN 11
+#define I2C_SCL_PIN SCL
+#define I2C_SDA_PIN SDA
 #else
 // Pinouts für das ULANZI-Environment
 #define BATTERY_PIN 34

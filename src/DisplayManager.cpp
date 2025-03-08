@@ -37,7 +37,7 @@ int previousDataLength = 0;
 #ifdef awtrix2_upgrade
 #define MATRIX_PIN D2
 #else
-#define MATRIX_PIN 32
+#define MATRIX_PIN T2
 #endif
 
 #define MATRIX_WIDTH 32
