@@ -46,8 +46,8 @@ const char *message = "HELLO"; // Die Nachricht, die gesendet werden soll
 #define BATTERY_PIN 4
 #define BUZZER_PIN 5
 #define LDR_PIN 6
-#define BUTTON_UP_PIN 7
-#define BUTTON_DOWN_PIN 8
+#define BUTTON_UP_PIN 11
+#define BUTTON_DOWN_PIN 7
 #define BUTTON_SELECT_PIN 10
 #define I2C_SCL_PIN SCL
 #define I2C_SDA_PIN SDA
