@@ -86,7 +86,7 @@ MelodyPlayer player(BUZZER_PIN, 1, LOW);
 
 EasyButton button_left(BUTTON_UP_PIN);
 EasyButton button_right(BUTTON_DOWN_PIN);
-EasyButton button_select(BUTTON_SELECT_PIN);
+EasyButton button_select(BUTTON_SELECT_PIN, 500, true, false);
 EasyButton button_reset(RESET_PIN);
 
 LightDependentResistor photocell(LDR_PIN,
